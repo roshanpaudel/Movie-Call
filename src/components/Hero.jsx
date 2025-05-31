@@ -1,4 +1,5 @@
 import React from "react";
+import { MovieCard } from "./MovieCard";
 
 export const Hero = () => {
   const movieStyle = {
@@ -15,10 +16,10 @@ export const Hero = () => {
         <h2 className="container">MovieCall</h2>
       </nav>
       <div
-        className="hero d-flex justify-content-center align-items-center text-light"
+        className="hero d-flex justify-content-center align-items-center text-light "
         style={movieStyle}
       >
-        <div className="hero-content">
+        <div className="hero-content mt-5">
           <div className="form-center">
             <div className="text-center">
               <h1>Search million of movies </h1>
@@ -39,6 +40,9 @@ export const Hero = () => {
               >
                 Button
               </button>
+            </div>
+            <div className="movie-card-content">
+              <MovieCard />
             </div>
           </div>
         </div>

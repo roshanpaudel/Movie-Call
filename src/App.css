@@ -14,3 +14,15 @@ nav {
 .hero-content {
   max-width: 450px;
 }
+
+/* card  */
+
+.movie-card-content {
+  background: rgba(255, 255, 255, 0.514);
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+}
+.movie-card-content img {
+  width: 100%;
+  height: auto;
+}
