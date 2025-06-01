@@ -3,11 +3,11 @@ import { MovieCard } from "./MovieCard";
 
 export const Display = () => {
   return (
-    <div className="container mt-5">
+    <div className="container mt-5 rounded">
       <div className="bg-dark p-3">
         <div className="row">
           <div className="col">
-            <div class="d-grid gap-2 d-md-block">
+            <div class="btn-group" role="group" aria-label="Basic example">
               <button class="btn btn-primary" type="button">
                 All
               </button>
@@ -21,8 +21,8 @@ export const Display = () => {
             <div className="mt-3 text-light">2 movies listed</div>
           </div>
         </div>
-        <div className="row">
-          <div className="col">
+        <div className="row ">
+          <div className="col movie-card-content">
             <MovieCard />
           </div>
         </div>
