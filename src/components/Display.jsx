@@ -21,9 +21,13 @@ export const Display = () => {
             <div className="mt-3 text-light">2 movies listed</div>
           </div>
         </div>
-        <div className="row ">
-          <div className="col movie-card-content">
-            <MovieCard />
+        <div className="row mt-5">
+          <div className="col d-flex justify-content-around gap-4 flex-wrap">
+            {new Array(10).fill("").map((item, i) => (
+              <div className="movie-card-content" key={i}>
+                <MovieCard />
+              </div>
+            ))}
           </div>
         </div>
       </div>
