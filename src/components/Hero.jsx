@@ -1,7 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { MovieCard } from "./MovieCard";
+import { fetchFromAPI } from "../utils/axios";
+import { randomChar } from "../utils/random";
 
 export const Hero = () => {
+  useEffect(() => {
+    fetchMovie(randomChar());
+  }, []);
+
+  const fetchMovie = async (str) => {
+    const movie = await fetchFromAPI(str);
+    console.log(movie);
+  };
   const movieStyle = {
     backgroundImage: `url(
       "https://www.omdbapi.com/src/poster.jpg"
