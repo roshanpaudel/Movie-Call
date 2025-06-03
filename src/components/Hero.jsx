@@ -1,16 +1,17 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { MovieCard } from "./MovieCard";
 import { fetchFromAPI } from "../utils/axios";
 import { randomChar } from "../utils/random";
 
 export const Hero = () => {
+  const [searchedMovie, setSearchedMovie] = useState({});
   useEffect(() => {
     fetchMovie(randomChar());
   }, []);
 
   const fetchMovie = async (str) => {
     const movie = await fetchFromAPI(str);
-    console.log(movie);
+    setSearchedMovie(movie);
   };
   const movieStyle = {
     backgroundImage: `url(
@@ -52,7 +53,7 @@ export const Hero = () => {
               </button>
             </div>
             <div className="movie-card-content">
-              <MovieCard />
+              <MovieCard searchedMovie={searchedMovie} />
             </div>
           </div>
         </div>

@@ -25,7 +25,7 @@ export const Display = () => {
           <div className="col d-flex justify-content-around gap-4 flex-wrap">
             {new Array(10).fill("").map((item, i) => (
               <div className="movie-card-content" key={i}>
-                <MovieCard />
+                {/* <MovieCard /> */}
               </div>
             ))}
           </div>

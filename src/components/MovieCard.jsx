@@ -1,7 +1,8 @@
 import React from "react";
 
-export const MovieCard = () => {
-  const Poster = "https://www.omdbapi.com/src/poster.jpg";
+export const MovieCard = ({ searchedMovie }) => {
+  const { Poster, Title, imdbRating, Plot } = searchedMovie;
+
   return (
     <div className="container">
       <div className="row text-dark p-3">
@@ -10,8 +11,8 @@ export const MovieCard = () => {
         </div>
         <div className="col-md">
           <h3>Movie name</h3>
-          <p>IMDB Rating: 7.9</p>
-          <p>Lorem ipsum dolor sit amet.</p>
+          <p>IMDB Rating: {imdbRating}</p>
+          <p> {Plot?.slice(0, 70) || "No plot available"} ...</p>
           <div className="d-flex justify-content-between">
             <button className="btn btn-warning">Drama</button>
             <button className="btn btn-info">Action</button>
