@@ -1,23 +1,31 @@
 # 🎬 Movie World App
 
-A React-based web application to browse and discover movies using the OMDb API.
+Movie World is a sleek and responsive React-based web application that allows users to search, browse, and view details about their favorite movies using the OMDb API.
 
-## 🚀 Features
-- Search for movies by title
-- View detailed movie information
-- Responsive and modern UI
-- Built with React and Axios
+---
+
+## ✨ Features
+
+- 🔍 Search movies by title
+- 🎞️ Display movie posters, genres, ratings, and more
+- 📱 Responsive design for mobile and desktop
+- ⚡ Fast, clean UI built with React
+- 🔗 External links to IMDb pages
+
+---
 
 ## 🛠️ Tech Stack
-- React.js
-- Axios
-- CSS Modules / Tailwind (if used)
-- OMDb API
 
-## 📦 Installation
+- **Frontend**: React.js, JSX, CSS Modules / Tailwind CSS
+- **API**: [OMDb API](https://www.omdbapi.com/)
+- **HTTP Client**: Axios
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/yourusername/movie-world-app.git
 cd movie-world-app
-npm install
-npm start
