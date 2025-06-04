@@ -71,82 +71,89 @@
 ```bash
 git clone https://github.com/yourusername/movie-world-app.git
 cd movie-world-app
-Install dependencies
+```
 
-bash
-Copy
-Edit
+2. **Install dependencies**
+
+```bash
 npm install
-Create .env file and add your OMDb API key
+```
 
-bash
-Copy
-Edit
+3. **Create `.env` file and add your OMDb API key**
+
+```bash
 touch .env
+```
+
 Add this line:
 
-env
-Copy
-Edit
+```env
 REACT_APP_OMDB_API_KEY=your_api_key_here
-Start the development server
+```
 
-bash
-Copy
-Edit
+4. **Start the development server**
+
+```bash
 npm start
-Visit the app in your browser at: http://localhost:3000
+```
 
-Usage
-Type a movie title into the search input.
+Visit the app in your browser at: `http://localhost:3000`
 
-Click on any movie result to view more details.
+---
 
-If no match is found, a "No Results" message is shown.
+## Usage
 
-If the API fails, an error message is displayed.
+- Type a movie title into the search input.
+- Click on any movie result to view more details.
+- If no match is found, a "No Results" message is shown.
+- If the API fails, an error message is displayed.
 
-API Setup
-This app uses the OMDb API to fetch movie data.
+---
 
-Visit: https://www.omdbapi.com/apikey.aspx
+## API Setup
 
-Sign up for a free API key
+This app uses the [OMDb API](https://www.omdbapi.com/) to fetch movie data.
 
-Add the API key to your .env file as shown above
+- Visit: https://www.omdbapi.com/apikey.aspx
+- Sign up for a free API key
+- Add the API key to your `.env` file as shown above
 
-Testing
+---
+
+## Testing
+
 The app is structured for easy testing and supports tools like:
 
-Jest (for unit tests)
+- **Jest** (for unit tests)
+- **React Testing Library** (for component behavior)
 
-React Testing Library (for component behavior)
+You can start adding tests in a `__tests__` or `tests` folder:
 
-You can start adding tests in a __tests__ or tests folder:
-
-bash
-Copy
-Edit
+```bash
 npm test
-Deployment
+```
+
+---
+
+## Deployment
+
 To deploy a production-ready build:
 
-bash
-Copy
-Edit
+```bash
 npm run build
-You can then deploy the /build folder to:
+```
 
-Vercel
+You can then deploy the `/build` folder to:
 
-Netlify
+- [Vercel](https://vercel.com/)
+- [Netlify](https://www.netlify.com/)
+- [GitHub Pages](https://pages.github.com/)
 
-GitHub Pages
+---
 
-Folder Structure
-pgsql
-Copy
-Edit
+## Folder Structure
+
+```
 movie-world-app/
 ├── public/
 │   └── index.html
@@ -164,21 +171,34 @@ movie-world-app/
 ├── .env
 ├── package.json
 └── README.md
-License
-This project is licensed under the MIT License.
+```
+
+---
+
+## License
+
+This project is licensed under the **MIT License**.  
 Feel free to use and modify it for personal or commercial projects.
 
-Contributing
-Contributions are welcome!
+---
+
+## Contributing
+
+Contributions are welcome!  
 If you'd like to improve the app or fix bugs:
 
-Fork the repository
+1. Fork the repository
+2. Create a new branch (`git checkout -b feature-name`)
+3. Commit your changes (`git commit -m 'Add feature'`)
+4. Push to the branch (`git push origin feature-name`)
+5. Open a Pull Request
 
-Create a new branch (git checkout -b feature-name)
+---
 
-Commit your changes (git commit -m 'Add feature')
+## Contact
 
-Push to the branch (git push origin feature-name)
+Maintainer:Roshan Paudel  
+GitHub: [@roshanpaudel](https://github.com/roshanpaudel)  
+Email: paudelroshan93@gmail.com
 
-Open a Pull Request
-
+---
