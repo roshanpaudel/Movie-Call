@@ -1,12 +1,23 @@
-# React + Vite
+# 🎬 Movie World App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React-based web application to browse and discover movies using the OMDb API.
 
-Currently, two official plugins are available:
+## 🚀 Features
+- Search for movies by title
+- View detailed movie information
+- Responsive and modern UI
+- Built with React and Axios
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Tech Stack
+- React.js
+- Axios
+- CSS Modules / Tailwind (if used)
+- OMDb API
 
-## Expanding the ESLint configuration
+## 📦 Installation
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+git clone https://github.com/yourusername/movie-world-app.git
+cd movie-world-app
+npm install
+npm start
