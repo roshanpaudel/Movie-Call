@@ -31,6 +31,7 @@ export const Hero = () => {
 
   const handleOnSearch = () => {
     const str = searchRef.current.value;
+    fetchMovie(str);
     console.log(str);
   };
   return (
@@ -53,7 +54,7 @@ export const Hero = () => {
                 ref={searchRef}
                 type="text"
                 className="form-control"
-                placeholder="Enter movie name"
+                placeholder="Search movie by name"
                 aria-label="movie name"
                 aria-describedby="button-addon"
               />
