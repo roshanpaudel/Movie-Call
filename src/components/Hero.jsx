@@ -7,7 +7,7 @@ export const Hero = () => {
   const [searchedMovie, setSearchedMovie] = useState({});
   const [bgImg, setBgImg] = useState("");
   const shouldFetchRef = useRef(true);
-
+  const searchRef = useRef("");
   useEffect(() => {
     if (shouldFetchRef.current) {
       fetchMovie(randomChar());
@@ -28,6 +28,11 @@ export const Hero = () => {
     backgroundPosition: "center",
     backgroundSize: "cover",
   };
+
+  const handleOnSearch = () => {
+    const str = searchRef.current.value;
+    console.log(str);
+  };
   return (
     <div>
       <nav className="py-3 text-danger fixed-top ">
@@ -45,6 +50,7 @@ export const Hero = () => {
             </div>
             <div className="input-group my-5 ">
               <input
+                ref={searchRef}
                 type="text"
                 className="form-control"
                 placeholder="Enter movie name"
@@ -52,11 +58,12 @@ export const Hero = () => {
                 aria-describedby="button-addon"
               />
               <button
+                onClick={handleOnSearch}
                 className="btn btn-danger"
                 type="button"
                 id="button-addon"
               >
-                Button
+                Search
               </button>
             </div>
             <div className="movie-card-content">
