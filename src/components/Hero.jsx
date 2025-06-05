@@ -1,21 +1,28 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { MovieCard } from "./MovieCard";
 import { fetchFromAPI } from "../utils/axios";
 import { randomChar } from "../utils/random";
 
 export const Hero = () => {
   const [searchedMovie, setSearchedMovie] = useState({});
+  const [bgImg, setBgImg] = useState("");
+  const shouldFetchRef = useRef(true);
+
   useEffect(() => {
-    fetchMovie(randomChar());
+    if (shouldFetchRef.current) {
+      fetchMovie(randomChar());
+      shouldFetchRef.current = false;
+    }
   }, []);
 
   const fetchMovie = async (str) => {
     const movie = await fetchFromAPI(str);
     setSearchedMovie(movie);
+    setBgImg(movie.Poster);
   };
   const movieStyle = {
     backgroundImage: `url(
-      "https://www.omdbapi.com/src/poster.jpg"
+      ${bgImg}
     )`,
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
