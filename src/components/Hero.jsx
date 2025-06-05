@@ -6,8 +6,11 @@ import { randomChar } from "../utils/random";
 export const Hero = () => {
   const [searchedMovie, setSearchedMovie] = useState({});
   const [bgImg, setBgImg] = useState("");
+  const [searching, setSearching] = useState(false);
+
   const shouldFetchRef = useRef(true);
   const searchRef = useRef("");
+
   useEffect(() => {
     if (shouldFetchRef.current) {
       fetchMovie(randomChar());
@@ -19,6 +22,7 @@ export const Hero = () => {
     const movie = await fetchFromAPI(str);
     setSearchedMovie(movie);
     setBgImg(movie.Poster);
+    setSearching(false);
   };
   const movieStyle = {
     backgroundImage: `url(
@@ -52,6 +56,7 @@ export const Hero = () => {
             <div className="input-group my-5 ">
               <input
                 ref={searchRef}
+                onFocus={() => setSearching(true)}
                 type="text"
                 className="form-control"
                 placeholder="Search movie by name"
@@ -67,9 +72,11 @@ export const Hero = () => {
                 Search
               </button>
             </div>
-            <div className="movie-card-content">
-              <MovieCard searchedMovie={searchedMovie} />
-            </div>
+            {!searching && (
+              <div className="movie-card-content">
+                <MovieCard searchedMovie={searchedMovie} />
+              </div>
+            )}
           </div>
         </div>
       </div>
