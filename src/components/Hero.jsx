@@ -47,12 +47,15 @@ export const Hero = () => {
         className="hero d-flex justify-content-center align-items-center text-light "
         style={movieStyle}
       >
-        <div className="hero-content mt-5">
+        <div className="hero-content mt-3">
           <div className="form-center">
-            <div className="text-center">
-              <h1>Search million of movies </h1>
-              <p> Create your bucket list of movies and share</p>
-            </div>
+            {searching && (
+              <div className="text-center">
+                <h1>Search million of movies </h1>
+                <p> Create your bucket list of movies and share</p>
+              </div>
+            )}
+
             <div className="input-group my-5 ">
               <input
                 ref={searchRef}
@@ -73,7 +76,7 @@ export const Hero = () => {
               </button>
             </div>
             {!searching && (
-              <div className="movie-card-content">
+              <div className="movie-card-content showMovie">
                 <MovieCard searchedMovie={searchedMovie} />
               </div>
             )}

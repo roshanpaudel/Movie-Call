@@ -10,7 +10,7 @@ export const MovieCard = ({ searchedMovie }) => {
           <img src={Poster} alt="" />
         </div>
         <div className="col-md">
-          <h3>Movie name</h3>
+          <h3>{Title}</h3>
           <p>IMDB Rating: {imdbRating}</p>
           <p> {Plot?.slice(0, 70) || "No plot available"} ...</p>
           <div className="d-flex justify-content-between">
