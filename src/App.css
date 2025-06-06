@@ -29,13 +29,14 @@ nav {
 .form-center {
   position: absolute;
   top: 50%;
-  transform: translate(-50%, 0);
+  transform: translate(-50%, -50%);
   transition: all 0.5s;
 }
 .form-top {
   position: absolute;
   top: 15%;
   width: 450px;
+  left: 50%;
   transform: translate(-50%, 0);
   transition: all 0.5s;
 }
