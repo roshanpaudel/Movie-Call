@@ -48,10 +48,10 @@ export const Hero = () => {
         style={movieStyle}
       >
         <div className="hero-content mt-3">
-          <div className="form-center">
+          <div className={searching ? "form-center" : "form-top"}>
             {searching && (
               <div className="text-center">
-                <h1>Search million of movies </h1>
+                <h1>Search millions of movies </h1>
                 <p> Create your bucket list of movies and share</p>
               </div>
             )}
