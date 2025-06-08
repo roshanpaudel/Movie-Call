@@ -43,6 +43,11 @@ export const Hero = ({ addToMovieList }) => {
     setSearchedMovie({});
     setSearching(true);
   };
+
+  const handleOnAddToList = (genre) => {
+    addToMovieList({ ...searchedMovie, genre });
+  };
+
   return (
     <div>
       <nav className="py-3 text-danger fixed-top ">
@@ -85,6 +90,7 @@ export const Hero = ({ addToMovieList }) => {
                 <MovieCard
                   searchedMovie={searchedMovie}
                   handelOnDelete={handelOnDelete}
+                  handleOnAddToList={handleOnAddToList}
                 />
               </div>
             )}
