@@ -1,7 +1,7 @@
 import React from "react";
 import { MovieCard } from "./MovieCard";
 
-export const Display = () => {
+export const Display = ({ movieList }) => {
   return (
     <div className="container mt-5 rounded">
       <div className="bg-dark p-3">

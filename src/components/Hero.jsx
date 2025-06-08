@@ -3,7 +3,7 @@ import { MovieCard } from "./MovieCard";
 import { fetchFromAPI } from "../utils/axios";
 import { randomChar } from "../utils/random";
 
-export const Hero = () => {
+export const Hero = ({ addToMovieList }) => {
   const [searchedMovie, setSearchedMovie] = useState({});
   const [bgImg, setBgImg] = useState("");
   const [searching, setSearching] = useState(false);
