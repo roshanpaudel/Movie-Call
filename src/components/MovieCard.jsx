@@ -1,6 +1,6 @@
 import React from "react";
 
-export const MovieCard = ({ searchedMovie }) => {
+export const MovieCard = ({ searchedMovie, handelOnDelete }) => {
   const { Poster, Title, imdbRating, Plot } = searchedMovie;
 
   return (
@@ -18,7 +18,9 @@ export const MovieCard = ({ searchedMovie }) => {
             <button className="btn btn-info">Action</button>
           </div>
           <div className="d-grid mt-3">
-            <button className="btn btn-danger">Drama</button>
+            <button onClick={() => handelOnDelete()} className="btn btn-danger">
+              Delete
+            </button>
           </div>
         </div>
       </div>

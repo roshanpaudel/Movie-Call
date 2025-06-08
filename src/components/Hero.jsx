@@ -38,6 +38,11 @@ export const Hero = () => {
     fetchMovie(str);
     console.log(str);
   };
+
+  const handelOnDelete = () => {
+    setSearchedMovie({});
+    setSearching(true);
+  };
   return (
     <div>
       <nav className="py-3 text-danger fixed-top ">
@@ -77,7 +82,10 @@ export const Hero = () => {
             </div>
             {!searching && (
               <div className="movie-card-content showMovie">
-                <MovieCard searchedMovie={searchedMovie} />
+                <MovieCard
+                  searchedMovie={searchedMovie}
+                  handelOnDelete={handelOnDelete}
+                />
               </div>
             )}
           </div>
