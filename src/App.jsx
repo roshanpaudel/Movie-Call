@@ -7,7 +7,7 @@ function App() {
   const [movieList, setMovieList] = useState([]);
 
   const addToMovieList = (movie) => {
-    setMovieList([...movieList, movie]);
+    setMovieList((prevList) => [...prevList, movie]);
   };
   return (
     <div className="wrapper">
