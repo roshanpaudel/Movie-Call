@@ -46,6 +46,8 @@ export const Hero = ({ addToMovieList }) => {
 
   const handleOnAddToList = (genre) => {
     addToMovieList({ ...searchedMovie, genre });
+    setSearchedMovie({});
+    setSearching(true);
   };
 
   return (
