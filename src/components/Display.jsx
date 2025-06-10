@@ -6,7 +6,7 @@ export const Display = ({ movieList }) => {
   useEffect(() => {
     setDisplayMovie(movieList);
   }, [movieList]);
-  
+
   const handleOnFilter = (genre) => {
     if (genre === "all") {
       return setDisplayMovie(movieList);
@@ -20,7 +20,7 @@ export const Display = ({ movieList }) => {
       <div className="bg-dark p-3">
         <div className="row">
           <div className="col">
-            <div class="btn-group" role="group" aria-label="Basic example">
+            <div className="btn-group" role="group" aria-label="Basic example">
               <button
                 onClick={() => handleOnFilter("all")}
                 className="btn btn-primary"
@@ -37,7 +37,7 @@ export const Display = ({ movieList }) => {
               </button>
               <button
                 onClick={() => handleOnFilter("action")}
-                class="btn btn-info"
+                className="btn btn-info"
                 type="button"
               >
                 Action
@@ -48,7 +48,7 @@ export const Display = ({ movieList }) => {
         </div>
         <div className="row mt-5">
           <div className="col d-flex justify-content-around gap-4 flex-wrap">
-            {movieList.map((item, i) => (
+            {displayMovie.map((item, i) => (
               <div className="movie-card-content" key={i}>
                 <MovieCard searchedMovie={item} />
               </div>
