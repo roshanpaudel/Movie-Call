@@ -1,20 +1,45 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { MovieCard } from "./MovieCard";
 
 export const Display = ({ movieList }) => {
+  const [displayMovie, setDisplayMovie] = useState([]);
+  useEffect(() => {
+    setDisplayMovie(movieList);
+  }, [movieList]);
+  
+  const handleOnFilter = (genre) => {
+    if (genre === "all") {
+      return setDisplayMovie(movieList);
+    }
+
+    setDisplayMovie(movieList.filter((movie) => movie.genre === genre));
+  };
+
   return (
     <div className="container mt-5 rounded">
       <div className="bg-dark p-3">
         <div className="row">
           <div className="col">
             <div class="btn-group" role="group" aria-label="Basic example">
-              <button class="btn btn-primary" type="button">
+              <button
+                onClick={() => handleOnFilter("all")}
+                className="btn btn-primary"
+                type="button"
+              >
                 All
               </button>
-              <button class="btn btn-warning" type="button">
+              <button
+                onClick={() => handleOnFilter("drama")}
+                className="btn btn-warning"
+                type="button"
+              >
                 Drama
               </button>
-              <button class="btn btn-info" type="button">
+              <button
+                onClick={() => handleOnFilter("action")}
+                class="btn btn-info"
+                type="button"
+              >
                 Action
               </button>
             </div>
