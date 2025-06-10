@@ -5,7 +5,7 @@ export const MovieCard = ({
   handelOnDelete,
   handleOnAddToList,
 }) => {
-  const { Poster, Title, imdbRating, Plot } = searchedMovie;
+  const { Poster, Title, imdbRating, Plot, genre } = searchedMovie;
 
   return (
     <div className="container">
@@ -17,20 +17,22 @@ export const MovieCard = ({
           <h3>{Title}</h3>
           <p>IMDB Rating: {imdbRating}</p>
           <p> {Plot?.slice(0, 70) || "No plot available"} ...</p>
-          <div className="d-flex justify-content-between">
-            <button
-              onClick={() => handleOnAddToList("drama")}
-              className="btn btn-warning"
-            >
-              Drama
-            </button>
-            <button
-              onClick={() => handleOnAddToList("action")}
-              className="btn btn-info"
-            >
-              Action
-            </button>
-          </div>
+          {!genre && (
+            <div className="d-flex justify-content-between">
+              <button
+                onClick={() => handleOnAddToList("drama")}
+                className="btn btn-warning"
+              >
+                Drama
+              </button>
+              <button
+                onClick={() => handleOnAddToList("action")}
+                className="btn btn-info"
+              >
+                Action
+              </button>
+            </div>
+          )}
           <div className="d-grid mt-3">
             <button onClick={() => handelOnDelete()} className="btn btn-danger">
               Delete
