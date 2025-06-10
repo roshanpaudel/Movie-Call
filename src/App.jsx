@@ -7,7 +7,8 @@ function App() {
   const [movieList, setMovieList] = useState([]);
 
   const addToMovieList = (movie) => {
-    setMovieList((prevList) => [...prevList, movie]);
+    const tempMovie = movieList.filter((item) => item.imdbID !== movie.imdbID);
+    setMovieList([...tempMovie, movie]);
   };
   return (
     <div className="wrapper">
