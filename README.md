@@ -1,99 +1,91 @@
-# 🎬 Movie World App
+# Movie World App
 
-**Movie World** is a fully responsive and modern web application built with React.js that allows users to **search, explore, and discover detailed information about movies** from the **Open Movie Database (OMDb) API**. Designed with user experience in mind, it features a clean interface, fast search functionality, and well-structured movie information presentation — optimized for both mobile and desktop use.
-
----
-
-## 🚀 Features
-
-- 🔍 **Dynamic Movie Search**: Instantly search for movies by title with real-time API interaction.
-- 🖼️ **Movie Details**: View comprehensive movie information including:
-  - Poster image
-  - Genre
-  - Director
-  - Plot summary
-  - IMDb ratings and runtime
-- 📱 **Responsive Design**: Fully optimized for phones, tablets, and desktops using modern CSS techniques.
-- ⚠️ **Error Handling**: Displays clear error messages if no movie is found or API errors occur.
-- ⏳ **Loading Indicators**: Smooth loading transitions while fetching data from the OMDb API.
-- 🔗 **External Links**: Direct IMDb link for each movie for deeper exploration.
+Movie World is a responsive web application built with React that lets users search and view detailed information about movies using the OMDb API.
 
 ---
 
-## 🛠️ Tech Stack
+## Features
 
-Built using modern web technologies for performance and scalability:
-
-- **React.js** with Functional Components & Hooks  
-- **Axios** for clean and reliable HTTP requests  
-- **Tailwind CSS** or **CSS Modules** for modular, maintainable styling  
-- **OMDb API** for real-time movie data fetching
+- Search movies by title
+- View posters, genres, directors, plots, and ratings
+- Responsive layout for all devices
+- Error handling and loading states
+- External IMDb links
 
 ---
 
-## 🧩 Installation Guide
+## Tech Stack
 
-1. **Clone the Repository**
+- React.js + Hooks
+- Axios
+- CSS Modules or Tailwind CSS
+- OMDb API
+
+---
+
+## Installation
 
 ```bash
-git clone https://github.com/roshanpaudel/movie-world-app.git
+git clone https://github.com/yourusername/movie-world-app.git
 cd movie-world-app
-Install Dependencies
-
-bash
-Copy
-Edit
 npm install
-Configure API Access
+```
 
-Create a .env file in the root of the project and add your OMDb API key:
+### API Setup
 
-env
-Copy
-Edit
+Create a `.env` file in the root and add your OMDb API key:
+
+```env
 REACT_APP_OMDB_API_KEY=your_api_key_here
-You can obtain a free OMDb API key at: http://www.omdbapi.com/apikey.aspx
+```
 
-🚦 Running the App Locally
-bash
-Copy
-Edit
+### Run the App
+
+```bash
 npm start
-Open your browser and navigate to: http://localhost:3000
+```
 
-📦 Building for Production
-To create a production-ready version:
+Visit: `http://localhost:3000`
 
-bash
-Copy
-Edit
+---
+
+## Build for Production
+
+```bash
 npm run build
-Deploy the build/ directory using platforms such as:
+```
 
-Vercel
+Deploy the `/build` folder via Vercel, Netlify, or GitHub Pages.
 
-Netlify
+---
 
-GitHub Pages
+## Folder Structure
 
-🗂 Folder Structure
-php
-Copy
-Edit
-movie-world-app/
-├── public/
-│   └── index.html
-├── src/
-│   ├── components/     # Reusable UI components (SearchBar, MovieCard, etc.)
-│   ├── pages/          # Page-level components (e.g., Home, MovieDetails)
-│   ├── services/       # API handlers and utility functions
-│   ├── App.jsx         # App routing and layout
-│   └── index.js        # Entry point
-📄 License
-Distributed under the MIT License. See LICENSE for more information.
+```
+src/
+├── components/
+├── pages/
+├── services/
+├── App.jsx
+├── index.js
+```
 
-👤 Author & Maintainer
-Roshan Paudel
-📧 Email: paudelroshan93@gmail.com
-🐙 GitHub: @roshanpaudel
+---
 
+## License
+
+MIT License
+
+---
+
+## Contact
+
+Created by [Your Name] • [@yourusername](https://github.com/yourusername)
+
+## Contact
+
+Maintainer:Roshan Paudel  
+GitHub: [@roshanpaudel](https://github.com/roshanpaudel)  
+Email: paudelroshan93@gmail.com
+
+---
