@@ -5,7 +5,7 @@ export const MovieCard = ({
   handelOnDelete,
   handleOnAddToList,
 }) => {
-  const { Poster, Title, imdbRating, Plot, genre } = searchedMovie;
+  const { Poster, Title, imdbRating, Plot, genre, imdbID } = searchedMovie;
 
   return (
     <div className="container">
@@ -34,7 +34,10 @@ export const MovieCard = ({
             </div>
           )}
           <div className="d-grid mt-3">
-            <button onClick={() => handelOnDelete()} className="btn btn-danger">
+            <button
+              onClick={() => handelOnDelete(imdbID)}
+              className="btn btn-danger"
+            >
               Delete
             </button>
           </div>

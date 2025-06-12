@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { MovieCard } from "./MovieCard";
 
-export const Display = ({ movieList }) => {
+export const Display = ({ movieList, handleOnDeleteMovie }) => {
   const [displayMovie, setDisplayMovie] = useState([]);
   useEffect(() => {
     setDisplayMovie(movieList);
@@ -43,14 +43,19 @@ export const Display = ({ movieList }) => {
                 Action
               </button>
             </div>
-            <div className="mt-3 text-light">2 movies listed</div>
+            <div className="mt-3 text-light">
+              {displayMovie.length} movies listed
+            </div>
           </div>
         </div>
         <div className="row mt-5">
           <div className="col d-flex justify-content-around gap-4 flex-wrap">
             {displayMovie.map((item, i) => (
               <div className="movie-card-content" key={i}>
-                <MovieCard searchedMovie={item} />
+                <MovieCard
+                  searchedMovie={item}
+                  handelOnDelete={handleOnDeleteMovie}
+                />
               </div>
             ))}
           </div>
