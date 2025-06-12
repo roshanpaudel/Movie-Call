@@ -20,8 +20,10 @@ function App() {
   };
 
   const handleOnDeleteMovie = (imdbID) => {
+    const filteredMV = movieList.filter((mv) => mv.imdbID !== imdbID);
     confirm("Are you sure you want to delete this movie from your list?") &&
-      setMovieList(movieList.filter((mv) => mv.imdbID !== imdbID));
+      setMovieList(filteredMV);
+    storeInLocalSession(filteredMV);
   };
   return (
     <div className="wrapper">
