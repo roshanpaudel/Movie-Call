@@ -16,8 +16,8 @@ export const Display = ({ movieList, handleOnDeleteMovie }) => {
   };
 
   return (
-    <div className="container mt-5 rounded">
-      <div className="bg-dark p-3">
+    <div className="container mt-5 ">
+      <div className="bg-dark p-3 rounded-4">
         <div className="row">
           <div className="col">
             <div className="btn-group" role="group" aria-label="Basic example">
