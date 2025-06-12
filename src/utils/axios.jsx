@@ -6,7 +6,6 @@ export const fetchFromAPI = async (str) => {
   try {
     const url = apiEP + "t=" + str;
     const response = await axios.get(url);
-    console.log(response);
     return response.data;
   } catch (error) {
     console.log(error);

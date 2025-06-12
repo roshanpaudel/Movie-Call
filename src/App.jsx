@@ -12,7 +12,7 @@ function App() {
   useEffect(() => {
     const mvList = accessFromLocalSession();
     mvList?.length && setMovieList(mvList);
-  });
+  }, []);
   const addToMovieList = (movie) => {
     const tempMovie = movieList.filter((item) => item.imdbID !== movie.imdbID);
     setMovieList([...tempMovie, movie]);
