@@ -78,9 +78,6 @@ MIT License
 
 ---
 
-## Contact
-
-Created by [Your Name] • [@yourusername](https://github.com/yourusername)
 
 ## Contact
 
