@@ -18,7 +18,7 @@ Movie World is a responsive web application built with React that lets users sea
 
 - React.js + Hooks
 - Axios
-- CSS Modules or Tailwind CSS
+- CSS Modules or Bootstrap CSS
 - OMDb API
 
 ---
@@ -42,17 +42,17 @@ REACT_APP_OMDB_API_KEY=your_api_key_here
 ### Run the App
 
 ```bash
-npm start
+yarn dev
 ```
 
-Visit: `http://localhost:3000`
+Visit: `http://localhost:5173`
 
 ---
 
 ## Build for Production
 
 ```bash
-npm run build
+yarn build
 ```
 
 Deploy the `/build` folder via Vercel, Netlify, or GitHub Pages.
@@ -64,10 +64,10 @@ Deploy the `/build` folder via Vercel, Netlify, or GitHub Pages.
 ```
 src/
 ├── components/
-├── pages/
-├── services/
+├── utils/
+├── App.css
 ├── App.jsx
-├── index.js
+├── main.jsx
 ```
 
 ---
